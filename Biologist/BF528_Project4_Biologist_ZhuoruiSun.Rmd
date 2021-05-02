@@ -1,0 +1,24 @@
+---
+title: "BF528_Project4_Biologist_Zhuorui_Sun"
+author: "Zhuorui Sun"
+date: "2021/5/2"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+## Data filter and split
+```{r}
+##Read in marker genes table and split to 14 files by cluster
+setwd("D:/RStudio/BF528/Project4")
+ori_mg <- read.csv(file = 'sig_marker_genes.csv')
+data_out = c('0.csv','1.csv','2.csv','3.csv','4.csv','5.csv','6.csv','7.csv','8.csv','9.csv','10.csv','11.csv','12.csv','13.csv')
+for (i in 0:13){
+  curr <- subset(ori_mg, cluster == i)
+  curr.gene <- curr$gene
+  write.csv(curr.gene,paste0(i,".csv"), row.names = FALSE)
+}
+```
