@@ -16,3 +16,5 @@ Zhuorui Sun - Biologist @sunzhuorui
 
 Analyst: 
   - project4_analyst.R: Script containing full analysis and notes on marker gene to cell type matching with literature search
+Biologist:
+  - BF528_Project4_Biologist_ZhuoruiSun.Rmd: Read in marker gene table, select significant gene by p-value and split into 14 files by cluster for gene enrichment analysis
