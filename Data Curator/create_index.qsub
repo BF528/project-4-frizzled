@@ -1,0 +1,17 @@
+#!/bin/bash -l
+
+#$ -P bf528
+#$ -cwd
+#$ -j y
+#$ -pe omp 16
+
+echo "Running job $JOB_ID"
+echo "Started: $(date +%F)"
+echo "Running in directory: $PWD"
+
+module load salmon
+
+salmon index -t /projectnb2/bf528/users/frizzled/project_4/Data_Curator/Transcriptome/gencode.v37.transcripts.fa.gz --gencode -i /projectnb2/bf528/users/frizzled/project_4/Data_Curator/Transcriptome/index/
+
+
+echo "Job finished: $(date +%F)"

@@ -1,0 +1,21 @@
+#!/bin/bash -l
+
+#$ -P bf528
+#$ -cwd
+#$ -j y
+#$ -pe omp 16
+#$ -l h_rt=24:00:00
+
+echo "Running job $JOB_ID"
+echo "Started: $(date +%F)"
+echo "Running in directory: $PWD"
+
+echo "Started Alevin"
+
+module load salmon
+
+salmon alevin -l ISR -1 /projectnb/bf528/project_4_scrnaseq/fastq/SRR3879604/SRR3879604_1_bc.fastq.gz /projectnb/bf528/project_4_scrnaseq/fastq/SRR3879605/SRR3879605_1_bc.fastq.gz /projectnb/bf528/project_4_scrnaseq/fastq/SRR3879606/SRR3879606_1_bc.fastq.gz -2 /projectnb/bf528/project_4_scrnaseq/fastq/SRR3879604/SRR3879604_2.fastq.gz /projectnb/bf528/project_4_scrnaseq/fastq/SRR3879605/SRR3879605_2.fastq.gz /projectnb/bf528/project_4_scrnaseq/fastq/SRR3879606/SRR3879606_2.fastq.gz --end 5 --barcodeLength 19 --umiLength 6 -i /projectnb2/bf528/users/frizzled/project_4/Data_Curator/Transcriptome/index -p 16 -o /projectnb2/bf528/users/frizzled/project_4/Data_Curator/Alevin_Output/Whitelist_mean_counts --tgMap /projectnb/bf528/users/frizzled/project_4/Data_Curator/GTF/txp2gene.tsv --whitelist /projectnb/bf528/users/frizzled/project_4/Data_Curator/Whitelist/whitelist_from_mean_counts.txt --dumpMtx
+
+echo "Finished Alevin"
+
+echo "Job finished: $(date +%F)"
