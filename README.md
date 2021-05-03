@@ -1,6 +1,8 @@
-# Project Description
+# Project 4 : Single Cell RNA-Seq Analysis of Pancreatic Cells
 
-A brief description of what this repository is for and what it contains
+We reanalyze the data from the original study by Baron et al (2016) and replicate some of the results that are presented in the paper. In this project, we processed the barcode reads of a single cell sequencing dataset and performed further analyses to identify clusters and marker genes for distinct cell type populations and performed gene enrichment analysis on the marker genes.
+
+This github repository contains the code that was written and developed for the analysis.
 
 # Contributors
 
