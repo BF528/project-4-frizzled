@@ -15,7 +15,7 @@ Zhuorui Sun - Biologist @sunzhuorui
 # Repository Contents
 
 Programmer:
-  - BF528_project4_programmer.R: Script containing code for quality control and the pre-processing steps of the Unique Molecular Identifier counts matrix using Seurat software workflow.
+  - BF528_project4_programmer.R: Script containing code for quality control and the pre-processing steps of the Unique Molecular Identifier counts matrix using the Seurat package workflow.
 
 Analyst: 
   - project4_analyst.R: Script containing full analysis and notes on marker gene to cell type matching with literature search.
